@@ -13,10 +13,19 @@
             "color_scheme": "accent-1",
             "link": ""
           }
+        },
+        "1f574873-e327-43df-ba53-b17b14fe354e": {
+          "type": "countdown",
+          "settings": {
+            "date": "Feb 16, 2023",
+            "time": "23:59:00",
+            "timezone": "EST"
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "1f574873-e327-43df-ba53-b17b14fe354e"
       ],
       "settings": {}
     },

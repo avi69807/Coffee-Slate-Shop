@@ -32,6 +32,7 @@
         "a {background: #80411e; color: white;}"
       ],
       "settings": {
+        "show_video": false,
         "image": "shopify:\/\/shop_images\/banner_image_main.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
@@ -175,7 +176,7 @@
         "9ecd4213-a55b-46aa-a0e6-01043ce7c9c7"
       ],
       "custom_css": [
-        ".collage__item.collage__item--product.collage__item--left {border: 1px solid #D3D3D3; padding: 10px;}",
+        ".collage__item.collage__item--product.collage__item--left {border: 1px solid #d3d3d3; padding: 10px;}",
         ".card__inner {background: white;}"
       ],
       "settings": {

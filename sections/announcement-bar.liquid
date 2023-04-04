@@ -8,7 +8,7 @@
           {%- endif -%}
               <div class="page-width">
                 <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
-                  <span>{{ block.settings.text | escape }}</span>
+                  <span>{{ block.settings.text | escape }}</span> 
                   {%- if block.settings.link != blank -%}
                     {% render 'icon-arrow' %}
                   {%- endif -%}
@@ -19,7 +19,16 @@
           {%- endif -%}
         {%- endif -%}
       </div>
-  {%- endcase -%}
+       {% when 'countdown' %}
+        <div class="announcement-bar">
+          <div class="page-width">
+            <p class="announcement-bar__message center h5">
+              <span>
+                Offer Ends ⌛: {{ block.settings.date }} {{ block.settings.time }} {{ block.settings.timezone }}
+              </span>
+            </p>
+        </div>
+    {%- endcase -%}
 {%- endfor -%}
 
 {% schema %}
@@ -92,7 +101,34 @@
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
         }
       ]
-    }
+    },
+     {
+      "type": "countdown",
+      "name": "Countdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "Feb 16, 2023",
+          "info": "Feb 16, 2023"
+        },
+        {
+          "type": "text",
+          "id": "time",
+          "label": "Time",
+          "default": "23:59:00",
+          "info": "23:59:00"
+        },
+        {
+          "type": "text",
+          "id": "timezone",
+          "label": "Timezone",
+          "default": "EST",
+          "info": "ex. EST, GMT-0700"
+        }    
+      ]
+     }
   ],
   "default": {
     "blocks": [
